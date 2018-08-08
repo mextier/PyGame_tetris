@@ -17,10 +17,13 @@ class SCORES:
 
     def end_game(self, playername):
         self.data[playername]=self.score
-        self.make_sorted()
-        breakpoint()
+        self.save()
 
     def save(self):
+        self.make_sorted()
+        self.data.clear()
+        for name,score in self.sorted:
+            self.data[name]=score
         with open(self.filename, 'wb') as f:
              pickle.dump(self.data, f)
 
