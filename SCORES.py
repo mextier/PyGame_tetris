@@ -6,7 +6,7 @@ import pickle
 
 class SCORES:
     def __init__(self,main_dir):
-        self.main_dir = main_dir
+        self.filename = os.path.join(main_dir,CONST.HISCORES_FILENAME)
         self.data = {}
 
     def new_game(self):
@@ -17,19 +17,17 @@ class SCORES:
     def end_game(self):
         pass
 
-    def save(self,filename):
-        with open(filename, 'wb') as f:
+    def save(self):
+        with open(self.filename, 'wb') as f:
              pickle.dump(self.data, f)
 
     def load(self):
-        hiscores = os.path.join(self.main_dir,CONST.HISCORES_FILENAME)
-        if not os.path.exists(hiscores):
+        if not os.path.exists(self.filename):
             self._defaults()
-            self.save(hiscores)
+            self.save()
         else:
-            with open(hiscores, 'rb') as f:
+            with open(self.filename, 'rb') as f:
                 self.data = pickle.load(f)
-                breakpoint()
 
     def _defaults(self):
         self.data = dict(zip(['Bob','Helen','John','Ed','Yuriy','Jane','Oliver','Alex','Wayne','Dmitriy'],[10000,9000,8000,7000,6000,5000,4000,3000,2000,1000]))
