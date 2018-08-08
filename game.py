@@ -14,6 +14,7 @@ def game_init():
     hiscores.load()
     hiscores.new_game()
 
+
 def game_mainloop():
     while True:
         pass

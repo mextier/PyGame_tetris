@@ -8,14 +8,17 @@ class SCORES:
     def __init__(self,main_dir):
         self.filename = os.path.join(main_dir,CONST.HISCORES_FILENAME)
         self.data = {}
+        self.sorted = []
 
     def new_game(self):
         self.score = 0
         self.level = 1
         self.lines_left_to_the_next_level = CONST.LEVEL_PER_LINE
 
-    def end_game(self):
-        pass
+    def end_game(self, playername):
+        self.data[playername]=self.score
+        self.make_sorted()
+        breakpoint()
 
     def save(self):
         with open(self.filename, 'wb') as f:
@@ -28,9 +31,13 @@ class SCORES:
         else:
             with open(self.filename, 'rb') as f:
                 self.data = pickle.load(f)
+        self.make_sorted()
 
     def _defaults(self):
         self.data = dict(zip(['Bob','Helen','John','Ed','Yuriy','Jane','Oliver','Alex','Wayne','Dmitriy'],[10000,9000,8000,7000,6000,5000,4000,3000,2000,1000]))
 
     def add_lines(self, lines):
         self.score += CONST.SCORE_PER_LINE[lines-1]
+
+    def make_sorted(self):
+        self.sorted = sorted(self.data.items(), key=lambda kv: kv[1], reverse = True)[:CONST.HISCORES_LIMIT]
