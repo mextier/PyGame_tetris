@@ -13,7 +13,7 @@ class SCORES:
     def new_game(self):
         self.score = 0
         self.level = 1
-        self.lines_left_to_the_next_level = CONST.LEVEL_PER_LINE
+        self.lines_left_to_the_next_level = CONST.LINES_PER_LEVEL
 
     def end_game(self, playername):
         self.data[playername]=self.score
