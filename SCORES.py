@@ -20,7 +20,7 @@ class SCORES:
         self.save()
 
     def save(self):
-        self.make_sorted()
+        self._make_sorted()
         self.data.clear()
         for name,score in self.sorted:
             self.data[name]=score
@@ -34,7 +34,7 @@ class SCORES:
         else:
             with open(self.filename, 'rb') as f:
                 self.data = pickle.load(f)
-        self.make_sorted()
+        self._make_sorted()
 
     def _defaults(self):
         self.data = dict(zip(['Bob','Helen','John','Ed','Yuriy','Jane','Oliver','Alex','Wayne','Dmitriy'],[10000,9000,8000,7000,6000,5000,4000,3000,2000,1000]))
@@ -42,5 +42,5 @@ class SCORES:
     def add_lines(self, lines):
         self.score += CONST.SCORE_PER_LINE[lines-1]
 
-    def make_sorted(self):
+    def _make_sorted(self):
         self.sorted = sorted(self.data.items(), key=lambda kv: kv[1], reverse = True)[:CONST.HISCORES_LIMIT]

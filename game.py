@@ -14,6 +14,10 @@ def game_init():
     hiscores.load()
     hiscores.new_game()
 
+    hiscores.add_lines(3)
+    hiscores.end_game()
+
+
 
 def game_mainloop():
     while True:
