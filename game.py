@@ -16,7 +16,7 @@ def game_init():
 
     hiscores.add_lines(3)
     hiscores.add_lines(2)
-    hiscores.end_game()
+    hiscores.end_game("Player")
 
 
 
