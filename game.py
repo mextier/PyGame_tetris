@@ -15,6 +15,7 @@ def game_init():
     hiscores.new_game()
 
     hiscores.add_lines(3)
+    hiscores.add_lines(3)
     hiscores.end_game()
 
 
