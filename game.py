@@ -1,5 +1,7 @@
 import sys, os, random
-import pygame, SCORES, CONST
+import pygame
+import SCORES, CONST
+
 
 hiscores = None
 
