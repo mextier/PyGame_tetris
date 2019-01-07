@@ -15,6 +15,7 @@ https://pythonworld.ru/gui/pyqt5-tetris.html
 https://www.youtube.com/playlist?list=PLQ7bGgvf9FtGJV3P4gj1cWdBYacQo7bKz
 https://github.com/JavaScriptProger/ge2d/blob/master/Tetris/game.js
 https://www.youtube.com/watch?v=sCit9jzDSrE
+https://www.youtube.com/watch?v=-8n91btt5d8
 
 GAMES:
 http://dendy.club/dendy/2849-tetris-tengen.html
