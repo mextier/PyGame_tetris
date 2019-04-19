@@ -6,6 +6,7 @@ import SCORES, CONST
 hiscores = None
 
 def game_entry():
+    pass
     game_init()
     game_mainloop()
 
