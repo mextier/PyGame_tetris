@@ -2,7 +2,6 @@ import os
 import pickle
 import CONST
 
-
 class SCORES:
     def __init__(self,main_dir):
         self.filename = os.path.join(main_dir,CONST.HISCORES_FILENAME)
