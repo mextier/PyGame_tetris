@@ -1,14 +1,19 @@
-import sys, os, random
+import sys
+import os
+import random
 import pygame
-import SCORES, CONST
+import SCORES
+import CONST
 
 
 hiscores = None
+
 
 def game_entry():
     pass
     game_init()
     game_mainloop()
+
 
 def game_init():
     main_dir = os.path.split(os.path.abspath(__file__))[0]
@@ -22,11 +27,9 @@ def game_init():
     hiscores.end_game("Player")
 
 
-
 def game_mainloop():
     while True:
         pass
-
 
 
 if __name__ == '__main__':
