@@ -2,6 +2,7 @@
 
 API:
 https://www.pygame.org/news
+https://www.youtube.com/playlist?list=PL7oO02dqbRbwQP_Jfaj3AxVJ84elbTvLy
 
 
 SAVES:
