@@ -19,6 +19,7 @@ https://github.com/JavaScriptProger/ge2d/blob/master/Tetris/game.js
 https://www.youtube.com/watch?v=sCit9jzDSrE
 https://www.youtube.com/watch?v=-8n91btt5d8
 https://www.youtube.com/playlist?list=PL3LQJkGQtzc5LV6zPpPZJp1kMJGGBRrdw
+https://www.youtube.com/watch?v=HEsAr2Yt2do
 
 GAMES:
 http://dendy.club/dendy/2849-tetris-tengen.html
